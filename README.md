@@ -1,35 +1,26 @@
-# USSD Student Information System Backend
+# USSD Student Information System
 
-A lightweight Python backend for a USSD-based Student Information System, allowing students to retrieve key data using simple USSD codes — no internet required.  
+## Problem
+University students without smartphones or reliable internet 
+cannot access their student portal during high-traffic periods 
+— exam results, fee statements, timetable updates become 
+inaccessible exactly when demand is highest.
 
-This system is ideal for areas with slow internet or for feature phones.
+## Solution
+A USSD-based alternative access channel allowing any student 
+with a basic phone to query results, fee balances, and 
+institutional updates via a structured menu system — 
+no internet required.
 
----
+## What this taught me
+- How USSD session flows work (stateful, session-based, 
+  short-lived)
+- How to design for failure: timeout handling, 
+  invalid input states, session expiry
+- High-traffic access patterns and why portal systems fail
 
-## 🚀 Overview
+## Tech
+Python · USSD flow logic · Session state management
 
-This backend powers a USSD interface for students to:
-
-- ✅ Check exam results  
-- ✅ View missed exams  
-- ✅ Check fee balance  
-
-The system works both locally and with a public endpoint via Ngrok, allowing integration with USSD gateways.
-
----
-
-## 📦 Features
-
-- Offline Access via USSD  
-- Simple Menu System implemented in `app.py`  
-- Testable Locally using `ussd_test.py`  
-- Public Endpoint setup with Ngrok for USSD callbacks  
-
----
-
-## 🛠️ Setup & Installation
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/EstherDev-ops/USSD-SYSTEM.git
-cd USSD-SYSTEM
+## Status
+Prototype — built to demonstrate the concept and flow design
